@@ -62,19 +62,21 @@ export default class Currency extends React.Component{
     render(){
         return(
             <div className="main">
-                <h1>Currency convertor</h1>
+                <label>Currency convertor</label>
                 <div className="getinput">
-                    <select className="form-control" className ="col-xs-6" ref={node=>this.fromCur = node}>
+                    <p  className ="col-xs-2">from</p>
+                    <select className="form-control" className ="col-xs-4" ref={node=>this.fromCur = node}>
                         {
                             this.Currency.map((element,index)=>{
-                            return <option>{element}</option>
+                            return <option key={index}>{element}</option>
                             })
                         }
                     </select>
-                    <select className="form-control" className ="col-xs-6" ref={node=>this.toCur = node}>
+                    <p  className ="col-xs-1">to</p>
+                    <select className="form-control" className ="col-xs-4" ref={node=>this.toCur = node}>
                         {
                             this.Currency.map((element,index)=>{
-                            return <option>{element}</option>
+                            return <option key={index}>{element}</option>
                             })
                         }
                     </select>
